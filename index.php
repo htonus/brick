@@ -25,22 +25,22 @@ $catalogue = array(
 		"800i" => "Raleway ExtraBold Italic",
 		"900" => "Raleway Heavy",
 		"900i" => "Raleway Heavy Italic"
-	),
+    ),
 	"TeX Gyre Heros" => array(
 		"400" => "TeXGyreHeros-Regular",
 		"400i" => "TeXGyreHeros-Italic",
 		"700" => "TeXGyreHeros-Bold",
 		"700i" => "TeXGyreHeros-BoldItalic"
-	),
+    ),
 	"EB Garamond" => array(
 		"400" => "EB Garamond 12 Regular",
 		"400i" => "EB Garamond 12 Italic"
-	),
+    ),
 	"Libre Baskerville" => array(
 		"400" => "Libre Baskerville",
 		"400i" => "Libre Baskerville Italic",
 		"700" => "Libre Baskerville Bold"
-	),
+    ),
 	"Open Sans" => array(
 		"300" => "Open Sans Light",
 		"300i" => "Open Sans Light Italic",
@@ -52,7 +52,7 @@ $catalogue = array(
 		"700i" => "Open Sans Bold Italic",
 		"900" => "Open Sans Extrabold",
 		"900i" => "Open Sans Extrabold Italic"
-	),
+    ),
 	"Roboto" => array(
 		"250" => "Roboto Thin",
 		"250i" => "Roboto Thin Italic",
@@ -66,13 +66,13 @@ $catalogue = array(
 		"700i" => "Roboto Bold Italic",
 		"900" => "Roboto Black",
 		"900i" => "Roboto Black Italic"
-	),
+    ),
 	"Roboto Slab" => array(
 		"250" => "Roboto Slab Thin",
 		"300" => "Roboto Slab Light",
 		"400" => "Roboto Slab",
 		"700" => "Roboto Slab Bold"
-	),
+    ),
 	"Crimson" => array(
 		"400" => "Crimson Roman",
 		"400i" => "Crimson Italic",
@@ -80,29 +80,29 @@ $catalogue = array(
 		"600i" => "Crimson Semibold Italic",
 		"700" => "Crimson Bold",
 		"700i" => "Crimson Bold Italic"
-	),
+    ),
 	"Latin Modern" => array(
 		"400" => "LMRoman10-Regular",
 		"400i" => "LMRoman10-Italic",
 		"700" => "LMRoman10-Bold",
 		"700i" => "LMRoman10-BoldItalic"
-	),
+    ),
 	"Montserrat" => array(
 		"400" => "Montserrat-Regular",
 		"700" => "Montserrat-Bold"
-	),
+    ),
 	"Noto Sans" => array(
 		"400" => "Noto Sans Regular",
 		"400i" => "Noto Sans Italic",
 		"700" => "Noto Sans Bold",
 		"700i" => "Noto Sans Bold Italic"
-	),
+    ),
 	"Noto Serif" => array(
 		"400" => "Noto Serif Regular",
 		"400i" => "Noto Serif Italic",
 		"700" => "Noto Serif Bold",
 		"700i" => "Noto Serif Bold Italic"
-	),
+    ),
 	"Source Sans Pro" => array(
 		"200" => "Source Sans Pro ExtraLight",
 		"200i" => "Source Sans Pro ExtraLight Italic",
@@ -116,10 +116,10 @@ $catalogue = array(
 		"700i" => "Source Sans Pro Bold Italic",
 		"900" => "Source Sans Pro Black",
 		"900i" => "Source Sans Pro Black Italic"
-	),
+    ),
 	"Inconsolata" => array(
 		"500" => "Inconsolata"
-	),
+    ),
 	"Linux Libertine" => array(
 		"400" => "Linux Libertine O",
 		"400i" => "Linux Libertine O Italic",
@@ -127,7 +127,7 @@ $catalogue = array(
 		"600i" => "Linux Libertine O Semibold Italic",
 		"700" => "Linux Libertine O Bold",
 		"700i" => "Linux Libertine O Bold Italic"
-	),
+    ),
 	"Source Code Pro" => array(
 		"200" => "Source Code Pro ExtraLight",
 		"300" => "Source Code Pro Light",
@@ -136,19 +136,19 @@ $catalogue = array(
 		"600" => "Source Code Pro Semibold",
 		"700" => "Source Code Pro Bold",
 		"900" => "Source Code Pro Black"
-	),
+    ),
 	"Bitter" => array(
 		"400" => "Bitter Regular",
 		"400i" => "Bitter Italic",
 		"700" => "Bitter Bold",
 		"700i" => "Bitter Bold Italic"
-	),
+    ),
 	"Anonymous Pro" => array(
 		"400" => "Anonymous Pro",
 		"400i" => "Anonymous Pro Italic",
 		"700" => "Anonymous Pro Bold",
 		"700i" => "Anonymous Pro Bold Italic"
-	),
+    ),
 	"Clear Sans" => array(
 		"250" => "Clear Sans Thin",
 		"300" => "Clear Sans Light",
@@ -158,10 +158,10 @@ $catalogue = array(
 		"500i" => "Clear Sans Medium Italic",
 		"700" => "Clear Sans Bold",
 		"700i" => "Clear Sans Bold Italic"
-	),
+    ),
 	"Telex" => array(
 		"400" => "Telex-Regular"
-	),
+    ),
 	"Alegreya Sans" => array(
 		"250" => "Alegreya Sans Thin",
 		"250i" => "Alegreya Sans Thin Italic",
@@ -177,7 +177,7 @@ $catalogue = array(
 		"800i" => "Alegreya Sans ExtraBold Italic",
 		"900" => "Alegreya Sans Black",
 		"900i" => "Alegreya Sans Black Italic"
-	)
+    )
 );
 
 // Headers
@@ -208,31 +208,31 @@ foreach ($query as $key=>$val) {
 	foreach ($weights as $weight) {
 		// Build font URL
 		$woff = "//brick.a.ssl.fastly.net/fonts/"
-			  . strtolower(str_replace(" ", '', $family))
-			  . "/"
-			  . $weight
-			  . ".woff";
+              . strtolower(str_replace(" ", '', $family))
+              . "/"
+              . $weight
+              . ".woff";
 
-		if (substr($weight, -1) == "i") {
-			$style = 'italic';
-			$weight = rtrim($weight, "i");
-		} else {
-			$style = 'normal';
-		}
+        if (substr($weight, -1) == "i") {
+            $style = 'italic';
+            $weight = rtrim($weight, "i");
+        } else {
+            $style = 'normal';
+        }
 
-		// Start with no URI's
-		$uri = '';
+        // Start with no URI's
+        $uri = '';
 
-		// Process flags
-		if (strpos($flags, 'f') === false) {
-			$local = $catalogue[$family][$weight];
-			$uri .= "local('" . $local . "'),";
-		}
-		// Add font URL
-		$uri .= "url(" . $woff . ") format('woff')";
+        // Process flags
+        if (strpos($flags, 'f') === false) {
+            $local = $catalogue[$family][$weight];
+            $uri .= "local('" . $local . "'),";
+        }
+        // Add font URL
+        $uri .= "url(" . $woff . ") format('woff')";
 
-		echo sprintf($BASE, $family, $style, $weight, $uri);
-	}
+        echo sprintf($BASE, $family, $style, $weight, $uri);
+    }
 }
 
 ?>
