@@ -2,7 +2,12 @@
 
 CSS example:
 ````
-@font-face{font-family:'Roboto';font-style:normal;font-weight:400;src:local('Roboto'),url(//brick.a.ssl.fastly.net/fonts/roboto/400.woff) format('woff')}
+@font-face{
+    font-family : 'Roboto';
+    font-style  : normal;
+    font-weight : 400;
+    src         : local('Roboto'), url(//brick.a.ssl.fastly.net/fonts/roboto/400.woff) format('woff')
+}
 ````
 In the age of the Internet, we've found ourselves in yet another typographic battle. In an effort to speed up loading times, we've compressed fonts, and along the way, we've lost the majority of the quality of rendered type.
 
